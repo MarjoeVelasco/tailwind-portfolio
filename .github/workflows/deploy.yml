@@ -1,0 +1,35 @@
+name: Deploy to AWS EC2
+
+on:
+  push:
+    branches:
+      - main # Change this to your desired branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up AWS CLI
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1 # Change this to your desired AWS region
+
+    - name: Install and build your application # Adjust these steps based on your application
+      run: |
+        # Add any necessary build commands here
+        # For example, if you're using Node.js:
+          npm install
+          npm run build
+          npm start
+
+    - name: Deploy to EC2 instance
+      run: |
+        # Replace EC2_INSTANCE_IP with your EC2 instance's public IP or hostname
+        # Replace /path/to/your/application with the path where you want to deploy your code
+        scp -r /path/to/your/application ubuntu@EC2_INSTANCE_IP:/path/to/destination

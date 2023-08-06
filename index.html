@@ -3,66 +3,31 @@
    <head>
       <meta charset="utf-8" />
       <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-      <meta
-         content="width=device-width, initial-scale=1, shrink-to-fit=no"
-         name="viewport"
-         />
-      <title>Homepage | Atom Template</title>
+      <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+      <title>Home</title>
       <meta property="og:title" content="Homepage | Atom Template" />
       <meta property="og:locale" content="en_US" />
-      <link
-         rel="canonical"
-         href="//"
-         />
-      <meta
-         property="og:url"
-         content="//"
-         />
-      <meta
-         name="description"
-         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-         />
+      <link rel="canonical" href="//"/>
+      <meta property="og:url" content="//"/>
+      <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
       <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
       <meta name="theme-color" content="#5540af" />
       <meta property="og:site_name" content="Atom Template" />
       <meta property="og:image" content="//assets/img/social.jpg" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@tailwindmade" />
-      <link
-         crossorigin="crossorigin"
-         href="https://fonts.gstatic.com"
-         rel="preconnect"
-         />
-      <link
-         as="style"
-         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
-         rel="preload"
-         />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
-         rel="stylesheet"
-         />
-      <link
-         href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-         rel="stylesheet"
-         />
-      <link
-         crossorigin="anonymous"
-         href="/assets/styles/main.min.css"
-         media="screen"
-         rel="stylesheet"
-         />
-      <script
-         defer
-         src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"
-         ></script>
+      <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
+      <link as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap" rel="preload"/>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+      <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet"/>
+      <link crossorigin="anonymous" href="/assets/styles/main.min.css" media="screen" rel="stylesheet"/>
+      <script defer src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"></script>
       <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
    </head>
    <body
       :class="{ 'overflow-hidden max-h-screen': mobileMenu }"
       class="relative"
-      x-data="{ mobileMenu: false }"
-      >
+      x-data="{ mobileMenu: false }">
       <div id="main" class="relative">
       <div
          x-data="{
@@ -75,89 +40,70 @@
          }
          }"
          >
-         <div class="w-full z-50 top-0 py-3 sm:py-5  absolute
-            ">
+         <div class="w-full z-50 top-0 py-3 sm:py-5  absolute">
             <div class="container flex items-center justify-between">
                <div>
                   <a href="/">
-                    <span class="text-4xl cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">MARJOE</span>
+                    <span class="text-4xl cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">MARJOEs</span>
                   </a>
                </div>
+               
+               <!-- Navigation desktop -->
                <div class="hidden lg:block">
                   <ul class="flex items-center">
+
                      <li class="group pl-6">
-                        <span
-                           @click="triggerNavItem('#about')"
-                           class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                           >About</span
-                           >
-                        <span
-                           class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                           ></span>
-                     </li>
-                     <li class="group pl-6">
-                        <span
-                           @click="triggerNavItem('#services')"
-                           class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                           >Services</span
-                           >
-                        <span
-                           class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                           ></span>
-                     </li>
-                     <li class="group pl-6">
-                        <span
-                           @click="triggerNavItem('#portfolio')"
-                           class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                           >Portfolio</span
-                           >
-                        <span
-                           class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                           ></span>
+                        <span @click="triggerNavItem('#about')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">
+                           About
+                        </span>
+                        <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
                      </li>
 
                      <li class="group pl-6">
-                        <span
-                           @click="triggerNavItem('#work')"
-                           class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                           >Work</span
-                           >
-                        <span
-                           class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                           ></span>
+                        <span @click="triggerNavItem('#services')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">
+                           Services
+                        </span>
+                        <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
                      </li>
+
                      <li class="group pl-6">
-                        <span
-                           @click="triggerNavItem('#statistics')"
-                           class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                           >Statistics</span
-                           >
-                        <span
-                           class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                           ></span>
+                        <span @click="triggerNavItem('#portfolio')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">
+                           Portfolio
+                        </span>
+                        <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
                      </li>
+
                      <li class="group pl-6">
-                        <span
-                           @click="triggerNavItem('#blog')"
-                           class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                           >Blog</span
-                           >
-                        <span
-                           class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                           ></span>
+                        <span @click="triggerNavItem('#work')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">
+                           Work
+                        </span>
+                        <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
                      </li>
+
                      <li class="group pl-6">
-                        <span
-                           @click="triggerNavItem('#contact')"
-                           class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                           >Contact</span
-                           >
-                        <span
-                           class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                           ></span>
+                        <span @click="triggerNavItem('#statistics')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">
+                           Statistics
+                        </span>
+                        <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                     </li>
+
+                     <li class="group pl-6">
+                        <span @click="triggerNavItem('#blog')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">
+                           Blog
+                        </span>
+                        <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                     </li>
+
+                     <li class="group pl-6">
+                        <span @click="triggerNavItem('#contact')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">
+                           Contact
+                        </span>
+                        <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
                      </li>
                   </ul>
                </div>
+
+               <!-- Navigation mobile -->
                <div class="block lg:hidden">
                   <button @click="mobileMenu = true">
                   <i class="bx bx-menu text-4xl text-white"></i>
@@ -240,7 +186,7 @@
          </div>
          <div>
             <div
-               class="relative bg-cover bg-center bg-no-repeat py-8"
+               class="h-screen relative bg-cover bg-center bg-no-repeat py-8"
                style="background-image: url(/assets/img/code-background.jpg); background-attachment: fixed;"
                >
                <div
@@ -320,8 +266,8 @@
 
                   <div class="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0 flex flex-wrap justify-center">
                     <img src="/assets/img/icon-html.png" alt="html icon" class="p-2 h-20">
-                    <img src="/assets/img/icon-nodejs.png" alt="html icon" class="p-2 h-20">
-                    <img src="/assets/img/icon-nodejs.png" alt="html icon" class="p-2 h-20">
+                    <img src="/assets/img/icon-css.png" alt="html icon" class="p-2 h-20">
+                    <img src="/assets/img/icon-react.png" alt="html icon" class="p-2 h-20">
                     <img src="/assets/img/icon-nodejs.png" alt="html icon" class="p-2 h-20">
                     <img src="/assets/img/icon-nodejs.png" alt="html icon" class="p-2 h-20">
                     <img src="/assets/img/icon-nodejs.png" alt="html icon" class="p-2 h-20">
